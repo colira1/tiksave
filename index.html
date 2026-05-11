@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <link href="images/public/69f7e47343d5a11569fcceea/b8469b6f5_logo.png" rel="icon" type="image/svg+xml"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <link href="manifest.json" rel="manifest"/>
+  <title>
+   TikSave
+  </title>
+  <script crossorigin="" src="assets/index-BczbWbCH.js" type="module">
+  </script>
+  <link crossorigin="" href="assets/index-Cq3VOSVS.css" rel="stylesheet"/>
+  <script type="module">
+   if (window.self === window.top) {
+  let lastPath = "";
+  function getPageNameFromPath(path) {
+    const segments = path.split("/").filter(Boolean);
+    return segments[0] || null;
+  }
+  function trackPageView() {
+    const path = window.location.pathname;
+    if (path === lastPath) return;
+    lastPath = path;
+    const pageName = getPageNameFromPath(path) || "home";
+    const appId = "69f7e47343d5a11569fcceea";
+    if (!appId) return;
+    fetch(`/app-logs/${appId}/log-user-in-app/${pageName}`, {
+      method: "POST",
+    }).catch(() => {});
+  }
+  const originalPushState = history.pushState.bind(history);
+  history.pushState = function (...args) {
+    originalPushState(...args);
+    trackPageView();
+  };
+  const originalReplaceState = history.replaceState.bind(history);
+  history.replaceState = function (...args) {
+    originalReplaceState(...args);
+    trackPageView();
+  };
+  window.addEventListener("popstate", trackPageView);
+  trackPageView();
+}
+  </script>
+  <meta content="A streamlined tool to organize, manage, and track your content strategy and creative workflow efficiently." name="description"/>
+  <meta content="TikSave" property="og:title"/>
+  <meta content="A streamlined tool to organize, manage, and track your content strategy and creative workflow efficiently." property="og:description"/>
+  <meta content="https://media.base44.com/images/public/69f7e47343d5a11569fcceea/b8469b6f5_logo.png/v1/fill/w_1200,h_630/b8469b6f5_logo.png" property="og:image"/>
+  <meta content="https://tik-path-pro.base44.app" property="og:url"/>
+  <meta content="website" property="og:type"/>
+  <meta content="TikSave" property="og:site_name"/>
+  <meta content="TikSave" name="twitter:title"/>
+  <meta content="A streamlined tool to organize, manage, and track your content strategy and creative workflow efficiently." name="twitter:description"/>
+  <meta content="https://media.base44.com/images/public/69f7e47343d5a11569fcceea/b8469b6f5_logo.png/v1/fill/w_1200,h_630/b8469b6f5_logo.png" name="twitter:image"/>
+  <meta content="summary_large_image" name="twitter:card"/>
+  <meta content="https://tik-path-pro.base44.app" name="twitter:url"/>
+  <meta content="yes" name="mobile-web-app-capable"/>
+  <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+  <meta content="TikSave" name="apple-mobile-web-app-title"/>
+  <link href="index.html" rel="canonical"/>
+  <script data-seo-source="builder" type="application/ld+json">
+   {"name": "TikSave", "@context": "https://schema.org", "@type": "WebSite", "url": "https://tik-path-pro.base44.app"}
+  </script>
+  <script data-seo-source="builder" type="application/ld+json">
+   {"name": "TikSave", "logo": "https://media.base44.com/images/public/69f7e47343d5a11569fcceea/b8469b6f5_logo.png", "@context": "https://schema.org", "@type": "Organization", "url": "https://tik-path-pro.base44.app"}
+  </script>
+ </head>
+ <body>
+  <div id="root">
+   <div data-seo-source="builder" id="seo-snapshot" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;">
+    <h1>
+     TikSave
+    </h1>
+    <p>
+     A streamlined tool to organize, manage, and track your content strategy and creative workflow efficiently.
+    </p>
+   </div>
+  </div>
+ </body>
+</html>
